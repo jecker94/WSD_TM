@@ -44,7 +44,7 @@ def replace_forvec(row):
 if __name__ == '__main__':
 
     # load data
-    data = pd.read_excel("C:/Users/Ecker/Documents/LOD/Topic/Evaluation.xlsx",
+    data = pd.read_excel("Evaluation.xlsx",
                          header=0)
     # delete all rows with a zero
     data_new = data[~(data == 0).any(axis=1)]
