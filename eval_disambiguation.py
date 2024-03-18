@@ -44,12 +44,11 @@ def replace_forvec(row):
 if __name__ == '__main__':
 
     # load data
-    data = pd.read_excel("Evaluation.xlsx",
-                         header=0)
+    data = pd.read_excel("Evaluation.xlsx", header=0)
+    
     # delete all rows with a zero
     data_new = data[~(data == 0).any(axis=1)]
-    print(data_new)
-    # data_new = data_new[~(data_new == "all").any(axis=1)]
+    # print(data_new)
 
     # create new dfs for all sets and change data in gold standard
     baseline = data_new[["Gold Standard", "Baseline"]]
